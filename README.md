@@ -5,7 +5,7 @@ Docker
 
 ### Running
 Open main folder and use: 
-```docker-compose up -d``` 
+```docker-compose up -d --build``` 
 
 Open a browser and navigate to:
 ```http://localhost:8000```
