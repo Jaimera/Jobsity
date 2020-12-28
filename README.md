@@ -3,6 +3,8 @@
 ### Requirements
 Docker
 
+- If it is a new docker machine on windows you may need to change "experimental" to true on Docker Engine Settings.
+
 ### Running
 Open main folder and use: 
 ```docker-compose up -d --build``` 
