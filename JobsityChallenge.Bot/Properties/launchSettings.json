@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Jobsity.Challenge.Bot": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}

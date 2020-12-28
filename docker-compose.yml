@@ -1,0 +1,28 @@
+﻿version: "3.6"
+services:
+    rabbitmq:
+        container_name: rabbitmq
+        ports:
+            - 5672:5672
+            - 15672:15672
+        environment:
+            - RABBITMQ_DEFAULT_USER=JobsityUser
+            - RABBITMQ_DEFAULT_PASS=JobPass#456        
+        image: rabbitmq:3-management
+                
+    web:
+        container_name: jobsity-challenge
+        build: .
+        ports:
+            - 8000:80
+        restart: on-failure        
+        depends_on:
+            - rabbitmq
+
+    bot:
+        container_name: jobsity-challenge-bot
+        build: ./JobsityChallenge.Bot
+        restart: on-failure        
+        depends_on:
+            - rabbitmq
+            - web
